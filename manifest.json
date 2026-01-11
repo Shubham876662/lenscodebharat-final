@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LensCode Bharat",
+  "version": "1.0",
+  "description": "AI-powered code analysis tool for OCR-extracted source code",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LensCode Bharat",
+    "default_icon": {
+      "16":"icons/icon.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": {
+    "16": "icons/icon.png"
+  }
+}

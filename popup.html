@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LensCode Bharat</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔍 LensCode Bharat</h1>
+      <p class="subtitle">AI Code Analysis Engine</p>
+    </header>
+
+    <div id="ocrNotice" class="ocr-notice"></div>
+
+    <div class="input-section">
+      <label for="codeInput">Paste OCR-extracted code:</label>
+      <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+    </div>
+
+    <div class="upload-section">
+      <label for="fileInput" class="upload-label">
+        📂 Upload Code (Img / PDF / Docx)
+      </label>
+      <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.txt,.pdf,.docx" hidden />
+    </div>
+
+    <button id="analyzeBtn" class="analyze-btn">Analyze Code</button>
+
+    <div id="loader" class="loader hidden">Analyzing...</div>
+
+    <div id="results" class="results hidden">
+      <div class="tab-container">
+        <button class="tab-btn active" data-tab="explanation">📖 Explanation</button>
+        <button class="tab-btn" data-tab="bugs">🐛 Bugs/Errors</button>
+        <button class="tab-btn" data-tab="flow">📊 Flow</button>
+      </div>
+
+      <div id="explanation" class="tab-content active">
+        <h3>Simple Explanation</h3>
+        <div id="explanationContent" class="content-box"></div>
+      </div>
+
+      <div id="bugs" class="tab-content">
+        <h3>Bugs & Errors</h3>
+        <div id="bugsContent" class="content-box"></div>
+      </div>
+
+      <div id="flow" class="tab-content">
+        <h3>Code Flow</h3>
+        <div id="flowContent" class="content-box"></div>
+      </div>
+    </div>
+
+    <div id="error" class="error-msg hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
